@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",
     "dev:server": "webpack --config webpack.server.js --watch",
-    "dev:express": "nodemon dist/server.bundle.js"
+    "dev:express": "nodemon dist/server.bundle.js",
+    "dev:client": "webpack --config webpack.client.js --watch"
   },
   "dependencies": {
     "@babel/core": "^7.3.4",
