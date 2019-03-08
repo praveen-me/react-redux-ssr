@@ -6,9 +6,6 @@ import routes from '../client/routes';
 import {Provider} from 'react-redux';
 
 
-// import Home from '../client/components/Home';
-
-
 export function template(path, store) {
   const jsx = renderToString(
     <Provider store={store}>

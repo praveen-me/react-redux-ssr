@@ -5,11 +5,11 @@ export default [
   {
     path: '/',
     exact: true,
-    component: Home
+    ...Home
   },
   {
     path: '/posts',
     exact: true,
-    component: Post
+    ...Post
   }
 ]

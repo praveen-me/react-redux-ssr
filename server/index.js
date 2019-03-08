@@ -9,7 +9,6 @@ const app = express();
 app.use(express.static('dist'));
 
 app.get('*', (req, res) => {
-  
   // MATCHING ROUTES FOR FETCHING DATA
   const promises = matchRoutes(routes, req.path).map(({route}) => {
     return route.loadData ? route.loadData(store) : null;
