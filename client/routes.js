@@ -3,13 +3,13 @@ import Post from "./components/Post";
 
 export default [
   {
+    ...Home,
     path: '/',
-    exact: true,
-    ...Home
+    exact: true
   },
   {
+    ...Post,
     path: '/posts',
     exact: true,
-    ...Post
   }
 ]
