@@ -1,15 +1,22 @@
 import React from 'react';
 import {renderToString} from "react-dom/server";
-import Home from '../client/components/Home';
+import {renderRoutes} from 'react-router-config';
+import {StaticRouter} from 'react-router-dom';
+import routes from '../client/routes';
+import {Provider} from 'react-redux';
 
 
-export function template() {
+// import Home from '../client/components/Home';
+
+
+export function template(path, store) {
   const jsx = renderToString(
-    <div>
-      <Home/>
-    </div>
+    <Provider store={store}>
+        <StaticRouter context={{}} location={path}>
+          <div>{renderRoutes(routes)}</div>
+        </StaticRouter>
+    </Provider>
   )
-  console.log(jsx);
   return `
     <html>
       <body>
