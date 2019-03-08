@@ -9,15 +9,19 @@ import routes from './routes';
 
 // Import store
 import store from './store/store';
+import Header from './components/Header';
 
 const JSX =() => (
   <Provider store={store}>
     <BrowserRouter>
-      <div>
+      <>
+        <Header/>
+        <div>
         {
           renderRoutes(routes)
         }
       </div>
+      </>
     </BrowserRouter>
   </Provider>
 )
